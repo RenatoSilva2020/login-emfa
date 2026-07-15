@@ -59,7 +59,12 @@ export default function LoginScreen() {
       }
     } catch (err: any) {
       console.error(err);
-      setError(err.message || 'Erro de conexão. Verifique sua internet.');
+      let errMsg = err.message || 'Erro de conexão. Verifique sua internet.';
+      // Check if it's a generic fetch error (usually CORS due to private Google Sheet)
+      if (err instanceof TypeError || errMsg.toLowerCase().includes('failed to fetch') || errMsg.toLowerCase().includes('fetch')) {
+        errMsg = 'Acesso negado ou sem conexão. Certifique-se de que a nova planilha do Google Sheets está configurada com compartilhamento definido para "Qualquer pessoa com o link" (Leitor).';
+      }
+      setError(errMsg);
     } finally {
       setLoading(false);
     }
@@ -89,7 +94,7 @@ export default function LoginScreen() {
         {/* Header */}
         <div className="p-8 pb-0 text-center">
           <div className="mb-6">
-            <img src="https://i.ibb.co/Jw4kFsvH/sis-e.png" alt="Logo" className="w-24 h-24 mx-auto object-contain" />
+            <img src="https://i.ibb.co/3mStSHv6/Screenshot-3.png" alt="Logo" className="w-24 h-24 mx-auto object-contain" />
           </div>
           <h1 className="text-3xl font-bold text-slate-900 mb-2 tracking-tight">SIS-e</h1>
           <p className="text-slate-500 text-sm">Digite sua matrícula para continuar</p>

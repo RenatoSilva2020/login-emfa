@@ -8,7 +8,7 @@ import { VitePWA } from 'vite-plugin-pwa';
 export default defineConfig(({mode}) => {
   const env = loadEnv(mode, '.', '');
   return {
-    base: '/login-emfa/',
+    base: './', // Ensure relative paths for GitHub Pages
     plugins: [
       react(), 
       tailwindcss(),
@@ -26,12 +26,12 @@ export default defineConfig(({mode}) => {
           start_url: './',
           icons: [
             {
-              src: 'https://i.ibb.co/Jw4kFsvH/sis-e.png',
+              src: 'https://i.ibb.co/3mStSHv6/Screenshot-3.png',
               sizes: '192x192',
               type: 'image/png'
             },
             {
-              src: 'https://i.ibb.co/Jw4kFsvH/sis-e.png',
+              src: 'https://i.ibb.co/3mStSHv6/Screenshot-3.png',
               sizes: '512x512',
               type: 'image/png'
             }
