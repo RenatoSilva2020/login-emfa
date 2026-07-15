@@ -8,7 +8,7 @@ import { VitePWA } from 'vite-plugin-pwa';
 export default defineConfig(({mode}) => {
   const env = loadEnv(mode, '.', '');
   return {
-    base: './', // Ensure relative paths for GitHub Pages
+    base: '/login-emfa/',
     plugins: [
       react(), 
       tailwindcss(),
