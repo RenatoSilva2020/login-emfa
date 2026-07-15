@@ -16,8 +16,8 @@ export default defineConfig(({mode}) => {
         registerType: 'autoUpdate',
         includeAssets: ['favicon.ico', 'mask-icon.svg'],
         manifest: {
-          name: 'SIS-e',
-          short_name: 'SIS-e',
+          name: 'SIS EMFA',
+          short_name: 'SIS EMFA',
           description: 'Sistema de autenticação para acesso ao portal do aluno',
           theme_color: '#ffffff',
           background_color: '#ffffff',
