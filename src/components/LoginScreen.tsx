@@ -96,7 +96,7 @@ export default function LoginScreen() {
           <div className="mb-6">
             <img src="https://i.ibb.co/3mStSHv6/Screenshot-3.png" alt="Logo" className="w-24 h-24 mx-auto object-contain" />
           </div>
-          <h1 className="text-3xl font-bold text-slate-900 mb-2 tracking-tight">SIS-e</h1>
+          <h1 className="text-3xl font-bold text-slate-900 mb-2 tracking-tight">SIS e-Escolar</h1>
           <p className="text-slate-500 text-sm">Digite sua matrícula para continuar</p>
         </div>
 
